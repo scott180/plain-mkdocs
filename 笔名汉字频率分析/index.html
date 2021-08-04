@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>笔名汉字频率分析 - calligraphy</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u7b14\u540d\u6c49\u5b57\u9891\u7387\u5206\u6790";
+    var mkdocs_page_input_path = "\u7b14\u540d\u6c49\u5b57\u9891\u7387\u5206\u6790.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> calligraphy</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../%E4%B9%A6%E6%B3%95%E7%BB%83%E4%B9%A0%E8%BD%A8%E8%BF%B9--%E6%98%8E%E6%9C%88%E5%87%A0%E6%97%B6%E6%9C%89/">书法练习轨迹  明月几时有</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../%E4%B9%A6%E6%B3%95%E7%BB%83%E4%B9%A0%E8%BD%A8%E8%BF%B9ReadMe/">书法练习轨迹ReadMe</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../%E5%8F%A4%E6%96%87%E8%AF%97%E8%AF%8D/">古文诗词</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">笔名汉字频率分析</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1">1、笔名分析</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1120210605">1.1、20210605</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1220210708">1.2、20210708</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1320210712">1.3、20210712</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1420210802">1.4、20210802</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2">2、明 释义</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3java">3、java代码</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4">4、我的账号</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">calligraphy</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>笔名汉字频率分析</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="_1">笔名汉字频率分析</h2>
+<p>数据来自《<a href="https://xuyq123.gitlab.io/plain/%E4%B9%A6%E6%B3%95%E7%BB%83%E4%B9%A0%E8%BD%A8%E8%BF%B9--%E6%98%8E%E6%9C%88%E5%87%A0%E6%97%B6%E6%9C%89.html">书法练习轨迹--明月几时有</a>》中关于本人笔名的记录。</p>
+<h3 id="1">1、笔名分析</h3>
+<pre><code>当前笔名：无为徐生
+
+注册多少app就有多少账号，每个账号都会有昵称或者用户名，因为昵称可以修改，故而昵称的数量会远远大于账号数量（像QQ、微信用了几年甚至十几年，昵称不知道变了多少次）。简单说明一下，手机上安装了多少app，大家的昵称数量就会大于这些app的数量。所有人皆是如此，所以现代人的昵称都很多很多。
+
+笔名就像姓名一样，同名现象相当普遍，因此很难准确找到目标对象。相比而言，邮箱 1021151991@qq.com 具有唯一性，是有效的也是本人常用的。
+
+</code></pre>
+<hr />
+<h4 id="1120210605">1.1、20210605</h4>
+<blockquote>
+<p>笔名</p>
+</blockquote>
+<pre><code>五字：明明之明夜、明明之夜夜、星夜无恒恒、秋水共长天
+四字：明明如夜、明如夜天、明来天明、明明夜夜、星夜无恒、如松之盛、天下有道、青青子襟、右耀去明、无为徐生
+三字：徐先生、明来其、名字清
+二字：博尔、古林、明天、深岸、甲方、龙光、知一、五湖、星名、源线、小明、长天、风云
+一字：徐、吾、风、明
+字母：xyqmmry、txyda、scott、scott180、xy180、xuyq123、sc1、jack、Jack2Java
+
+</code></pre>
+<blockquote>
+<p>分析</p>
+</blockquote>
+<pre><code class="language-bash">笔名总数：43个。其中：五字4个,四字10个,三字3个,二字13个,一字4个,字母9个。二字13个最多,三字3个最少。汉字‘明’出现次数最多，频率最高，共17次。
+
+汉字频率：{&quot;明&quot;:17,&quot;夜&quot;:9,&quot;天&quot;:6,&quot;如&quot;:3,&quot;徐&quot;:3,&quot;星&quot;:3,&quot;之&quot;:3,&quot;恒&quot;:3,&quot;无&quot;:3,&quot;名&quot;:2,&quot;生&quot;:2,&quot;风&quot;:2,&quot;青&quot;:2,&quot;来&quot;:2,&quot;长&quot;:2,&quot;耀&quot;:1,&quot;一&quot;:1,&quot;清&quot;:1,&quot;有&quot;:1,&quot;下&quot;:1,&quot;小&quot;:1,&quot;源&quot;:1,&quot;云&quot;:1,&quot;尔&quot;:1,&quot;五&quot;:1,&quot;林&quot;:1,&quot;龙&quot;:1,&quot;甲&quot;:1,&quot;水&quot;:1,&quot;岸&quot;:1,&quot;方&quot;:1,&quot;为&quot;:1,&quot;去&quot;:1,&quot;吾&quot;:1,&quot;线&quot;:1,&quot;先&quot;:1,&quot;光&quot;:1,&quot;秋&quot;:1,&quot;子&quot;:1,&quot;道&quot;:1,&quot;湖&quot;:1,&quot;字&quot;:1,&quot;博&quot;:1,&quot;盛&quot;:1,&quot;襟&quot;:1,&quot;古&quot;:1,&quot;知&quot;:1,&quot;共&quot;:1,&quot;深&quot;:1,&quot;右&quot;:1,&quot;其&quot;:1,&quot;松&quot;:1}
+
+
+
+</code></pre>
+<hr />
+<h4 id="1220210708">1.2、20210708</h4>
+<blockquote>
+<p>笔名</p>
+</blockquote>
+<pre><code>六字：烟火尘埃落定
+五字：明明之明夜、明明之夜夜、星夜无恒恒、秋水共长天、青青子衿天、明明如夜夜
+四字：明明如夜、明如夜天、明来天明、明明夜夜、星夜无恒、如松之盛、天下有道、青青子襟、右耀去明、秋水长天、无为徐生、清风之明、昨夜星辰
+三字：徐先生、明来其、名字清、一世界、雨中曲、天行健、明明了、明明夜
+二字：博尔、古林、明天、深岸、甲方、龙光、知一、五湖、星名、源线、小明、长天、风云、老徐、迈克、改之、择之、星夜、一柏、小徐、风格、明业、明飞、问橐、明夜、明一、米明、明云、明也、玄明、斗米、明达
+一字：徐、吾、风、明
+字母：xyqmmry、txyda、scott、scott180、xyqin、xy180、xu180、xuyq123、sc1、jack、Jack2Java、wuhu、longguang123、scott123、yxm、txyd、mmry
+
+</code></pre>
+<blockquote>
+<p>分析</p>
+</blockquote>
+<pre><code class="language-bash">笔名总数：81个。其中：六字1个,五字6个,四字13个,三字8个,二字32个,一字4个,字母17个。二字32个最多,六字1个最少。汉字‘明’出现次数最多，频率最高，共33次。
+
+汉字频率：{&quot;明&quot;:33,&quot;夜&quot;:15,&quot;天&quot;:9,&quot;之&quot;:6,&quot;徐&quot;:5,&quot;星&quot;:5,&quot;一&quot;:4,&quot;如&quot;:4,&quot;风&quot;:4,&quot;青&quot;:4,&quot;恒&quot;:3,&quot;无&quot;:3,&quot;长&quot;:3,&quot;清&quot;:2,&quot;名&quot;:2,&quot;小&quot;:2,&quot;云&quot;:2,&quot;生&quot;:2,&quot;水&quot;:2,&quot;秋&quot;:2,&quot;子&quot;:2,&quot;来&quot;:2,&quot;米&quot;:2,&quot;耀&quot;:1,&quot;老&quot;:1,&quot;玄&quot;:1,&quot;了&quot;:1,&quot;有&quot;:1,&quot;下&quot;:1,&quot;源&quot;:1,&quot;尔&quot;:1,&quot;五&quot;:1,&quot;世&quot;:1,&quot;林&quot;:1,&quot;斗&quot;:1,&quot;尘&quot;:1,&quot;龙&quot;:1,&quot;定&quot;:1,&quot;业&quot;:1,&quot;昨&quot;:1,&quot;中&quot;:1,&quot;辰&quot;:1,&quot;甲&quot;:1,&quot;岸&quot;:1,&quot;方&quot;:1,&quot;改&quot;:1,&quot;为&quot;:1,&quot;去&quot;:1,&quot;格&quot;:1,&quot;落&quot;:1,&quot;达&quot;:1,&quot;吾&quot;:1,&quot;线&quot;:1,&quot;埃&quot;:1,&quot;先&quot;:1,&quot;迈&quot;:1,&quot;光&quot;:1,&quot;克&quot;:1,&quot;界&quot;:1,&quot;行&quot;:1,&quot;柏&quot;:1,&quot;橐&quot;:1,&quot;道&quot;:1,&quot;湖&quot;:1,&quot;字&quot;:1,&quot;博&quot;:1,&quot;盛&quot;:1,&quot;飞&quot;:1,&quot;烟&quot;:1,&quot;襟&quot;:1,&quot;也&quot;:1,&quot;古&quot;:1,&quot;健&quot;:1,&quot;知&quot;:1,&quot;雨&quot;:1,&quot;择&quot;:1,&quot;火&quot;:1,&quot;问&quot;:1,&quot;共&quot;:1,&quot;深&quot;:1,&quot;曲&quot;:1,&quot;右&quot;:1,&quot;其&quot;:1,&quot;松&quot;:1,&quot;衿&quot;:1}
+
+
+</code></pre>
+<hr />
+<h4 id="1320210712">1.3、20210712</h4>
+<blockquote>
+<p>笔名</p>
+</blockquote>
+<pre><code>六字：烟火尘埃落定
+五字：明明之明夜、明明之夜夜、星夜无恒恒、秋水共长天、青青子衿天、明明如夜夜
+四字：明明如夜、明如夜天、明来天明、明明夜夜、星夜无恒、如松之盛、天下有道、青青子襟、右耀去明、秋水长天、无为徐生、清风之明、昨夜星辰、东门之旭、长风雨下、清风徐来、原味吐司、星星水源、和山以水
+三字：徐先生、明来其、名字清、一世界、雨中曲、天行健、明明了、明明夜、西之白、东门之、东有雨、徐庶一、飞一飞、斜风细、明之夜
+二字：博尔、古林、明天、深岸、甲方、龙光、知一、五湖、星名、源线、小明、长天、风云、老徐、迈克、改之、择之、星夜、一柏、小徐、风格、明业、明飞、问橐、明夜、明一、米明、明云、明也、玄明、斗米、明达、徐生、四海、广毅、麦克、和时、尚書
+一字：徐、吾、风、明
+字母：xyqmmry、txyda、scott、scott180、xyqin、xy180、xu180、xuyq123、sc1、jack、Jack2Java、wuhu、longguang123、scott123、yxm、txyd、mmry
+
+</code></pre>
+<blockquote>
+<p>分析</p>
+</blockquote>
+<pre><code class="language-bash">笔名总数：100个。其中：六字1个,五字6个,四字19个,三字15个,二字38个,一字4个,字母17个。二字38个最多,六字1个最少。汉字‘明’出现次数最多，频率最高，共34次。
+
+汉字频率：{&quot;明&quot;:34,&quot;夜&quot;:16,&quot;之&quot;:10,&quot;天&quot;:9,&quot;徐&quot;:8,&quot;星&quot;:7,&quot;风&quot;:7,&quot;一&quot;:6,&quot;水&quot;:4,&quot;青&quot;:4,&quot;长&quot;:4,&quot;如&quot;:4,&quot;清&quot;:3,&quot;东&quot;:3,&quot;生&quot;:3,&quot;恒&quot;:3,&quot;来&quot;:3,&quot;飞&quot;:3,&quot;无&quot;:3,&quot;雨&quot;:3,&quot;有&quot;:2,&quot;下&quot;:2,&quot;名&quot;:2,&quot;小&quot;:2,&quot;克&quot;:2,&quot;子&quot;:2,&quot;米&quot;:2,&quot;和&quot;:2,&quot;源&quot;:2,&quot;云&quot;:2,&quot;秋&quot;:2,&quot;门&quot;:2,&quot;耀&quot;:1,&quot;老&quot;:1,&quot;吐&quot;:1,&quot;尔&quot;:1,&quot;世&quot;:1,&quot;尘&quot;:1,&quot;业&quot;:1,&quot;尚&quot;:1,&quot;昨&quot;:1,&quot;中&quot;:1,&quot;甲&quot;:1,&quot;改&quot;:1,&quot;为&quot;:1,&quot;格&quot;:1,&quot;落&quot;:1,&quot;吾&quot;:1,&quot;先&quot;:1,&quot;光&quot;:1,&quot;界&quot;:1,&quot;行&quot;:1,&quot;橐&quot;:1,&quot;道&quot;:1,&quot;湖&quot;:1,&quot;字&quot;:1,&quot;博&quot;:1,&quot;襟&quot;:1,&quot;也&quot;:1,&quot;健&quot;:1,&quot;火&quot;:1,&quot;共&quot;:1,&quot;山&quot;:1,&quot;味&quot;:1,&quot;其&quot;:1,&quot;海&quot;:1,&quot;白&quot;:1,&quot;松&quot;:1,&quot;衿&quot;:1,&quot;西&quot;:1,&quot;广&quot;:1,&quot;玄&quot;:1,&quot;了&quot;:1,&quot;五&quot;:1,&quot;林&quot;:1,&quot;斗&quot;:1,&quot;龙&quot;:1,&quot;定&quot;:1,&quot;斜&quot;:1,&quot;原&quot;:1,&quot;麦&quot;:1,&quot;辰&quot;:1,&quot;庶&quot;:1,&quot;岸&quot;:1,&quot;方&quot;:1,&quot;去&quot;:1,&quot;达&quot;:1,&quot;线&quot;:1,&quot;埃&quot;:1,&quot;毅&quot;:1,&quot;细&quot;:1,&quot;迈&quot;:1,&quot;柏&quot;:1,&quot;盛&quot;:1,&quot;四&quot;:1,&quot;烟&quot;:1,&quot;古&quot;:1,&quot;以&quot;:1,&quot;知&quot;:1,&quot;择&quot;:1,&quot;旭&quot;:1,&quot;问&quot;:1,&quot;深&quot;:1,&quot;曲&quot;:1,&quot;右&quot;:1,&quot;时&quot;:1,&quot;司&quot;:1,&quot;書&quot;:1}
+
+
+</code></pre>
+<hr />
+<h4 id="1420210802">1.4、20210802</h4>
+<blockquote>
+<p>笔名</p>
+</blockquote>
+<pre><code>六字：烟火尘埃落定
+五字：明明之明夜、明明之夜夜、星夜无恒恒、秋水共长天、青青子衿天、明明如夜夜
+四字：明明如夜、明如夜天、明来天明、明明夜夜、星夜无恒、如松之盛、天下有道、青青子襟、右耀去明、秋水长天、无为徐生、清风之明、昨夜星辰、东门之旭、长风雨下、清风徐来、原味吐司、星星水源、和山以水
+三字：徐先生、明来其、名字清、一世界、雨中曲、天行健、明明了、明明夜、西之白、东门之、东有雨、徐庶一、飞一飞、斜风细、明之夜
+二字：博尔、古林、明天、深岸、甲方、龙光、知一、五湖、星名、源线、小明、长天、风云、老徐、迈克、改之、择之、星夜、一柏、小徐、风格、明业、明飞、问橐、明夜、明一、米明、明云、明也、玄明、斗米、明达、徐生、四海、广毅、麦克、和时、尚書、张及、李星、赵星、张三、李四、王五、赵六、测试、木叶
+一字：徐、吾、风、明
+字母：xyqmmry、txyda、scott、scott180、xyqin、xy180、xu180、xuyq123、sc1、jack、Jack2Java、wuhu、longguang123、scott123、yxm、txyd、mmry、xyq、xu、gaizhi180、xy18484、test、xu123
+
+</code></pre>
+<blockquote>
+<p>分析</p>
+</blockquote>
+<pre><code class="language-bash">
+笔名总数：115个。其中：六字1个,五字6个,四字19个,三字15个,二字47个,一字4个,字母23个。二字47个最多,六字1个最少。汉字‘明’出现次数最多，频率最高，共34次。
+
+汉字频率：{&quot;明&quot;:34,&quot;夜&quot;:16,&quot;之&quot;:10,&quot;星&quot;:9,&quot;天&quot;:9,&quot;徐&quot;:8,&quot;风&quot;:7,&quot;一&quot;:6,&quot;水&quot;:4,&quot;青&quot;:4,&quot;长&quot;:4,&quot;如&quot;:4,&quot;清&quot;:3,&quot;东&quot;:3,&quot;生&quot;:3,&quot;恒&quot;:3,&quot;来&quot;:3,&quot;飞&quot;:3,&quot;无&quot;:3,&quot;雨&quot;:3,&quot;有&quot;:2,&quot;下&quot;:2,&quot;名&quot;:2,&quot;小&quot;:2,&quot;张&quot;:2,&quot;克&quot;:2,&quot;李&quot;:2,&quot;子&quot;:2,&quot;米&quot;:2,&quot;赵&quot;:2,&quot;和&quot;:2,&quot;源&quot;:2,&quot;云&quot;:2,&quot;五&quot;:2,&quot;秋&quot;:2,&quot;四&quot;:2,&quot;门&quot;:2,&quot;耀&quot;:1,&quot;老&quot;:1,&quot;三&quot;:1,&quot;吐&quot;:1,&quot;尔&quot;:1,&quot;世&quot;:1,&quot;尘&quot;:1,&quot;业&quot;:1,&quot;尚&quot;:1,&quot;昨&quot;:1,&quot;木&quot;:1,&quot;中&quot;:1,&quot;甲&quot;:1,&quot;改&quot;:1,&quot;为&quot;:1,&quot;格&quot;:1,&quot;落&quot;:1,&quot;吾&quot;:1,&quot;先&quot;:1,&quot;光&quot;:1,&quot;测&quot;:1,&quot;界&quot;:1,&quot;行&quot;:1,&quot;橐&quot;:1,&quot;道&quot;:1,&quot;湖&quot;:1,&quot;字&quot;:1,&quot;博&quot;:1,&quot;襟&quot;:1,&quot;也&quot;:1,&quot;健&quot;:1,&quot;火&quot;:1,&quot;六&quot;:1,&quot;共&quot;:1,&quot;山&quot;:1,&quot;味&quot;:1,&quot;其&quot;:1,&quot;海&quot;:1,&quot;白&quot;:1,&quot;松&quot;:1,&quot;衿&quot;:1,&quot;西&quot;:1,&quot;广&quot;:1,&quot;玄&quot;:1,&quot;了&quot;:1,&quot;王&quot;:1,&quot;林&quot;:1,&quot;斗&quot;:1,&quot;龙&quot;:1,&quot;定&quot;:1,&quot;斜&quot;:1,&quot;原&quot;:1,&quot;麦&quot;:1,&quot;辰&quot;:1,&quot;庶&quot;:1,&quot;岸&quot;:1,&quot;方&quot;:1,&quot;去&quot;:1,&quot;达&quot;:1,&quot;线&quot;:1,&quot;埃&quot;:1,&quot;毅&quot;:1,&quot;细&quot;:1,&quot;迈&quot;:1,&quot;及&quot;:1,&quot;柏&quot;:1,&quot;试&quot;:1,&quot;盛&quot;:1,&quot;烟&quot;:1,&quot;古&quot;:1,&quot;以&quot;:1,&quot;知&quot;:1,&quot;择&quot;:1,&quot;旭&quot;:1,&quot;问&quot;:1,&quot;深&quot;:1,&quot;曲&quot;:1,&quot;右&quot;:1,&quot;时&quot;:1,&quot;叶&quot;:1,&quot;司&quot;:1,&quot;書&quot;:1}
+
+</code></pre>
+<hr />
+<h3 id="2">2、明 释义</h3>
+<pre><code>明
+拼 音： míng  
+部 首： 日 
+笔 画： 8 
+五 行： 水 
+繁 体： 明 
+五 笔： JEG
+笔 顺： 竖、横折、横、横、撇、横折钩、横、横
+
+释义：
+1.明亮（跟“暗”相对）：～月。天～。灯火通～。
+
+2.明白；清楚：问～。讲～。分～。去向不～。
+
+3.公开；显露在外；不隐蔽（跟“暗”相对）：～说。～令。～沟。～枪易躲，暗箭难防。
+
+4.眼力好；眼光正确；对事物现象看得清：聪～。英～。精～强干。耳聪目～。眼～手快。
+
+5.光明：弃暗投～。～人不做暗事。
+
+6.视觉：双目失～。
+
+7.懂得；了解：深～大义。不～利害。
+
+8.表明；显示：开宗～义。赋诗～志。
+
+9.明明，意思是显然如此：你～知道他不会，干吗还要为难他呀?
+
+10.次于今年、今天的：～天。～晨。～年。～春。
+
+11.朝代，公元1368—1644，朱元璋所建。先定都南京，永乐年间迁都北京。
+
+12.姓。
+
+</code></pre>
+<hr />
+<h3 id="3java">3、java代码</h3>
+<pre><code class="language-java">package com.xu.calligraphy.boot.common.util;
+
+import com.alibaba.fastjson.JSON;
+
+import java.util.*;
+
+/**
+ * 笔名汉字频率分析
+ * 文件位置：https://gitlab.com/xuyq123/calligraphy-boot
+ * 数据来源：https://gitlab.com/xuyq123/calligraphy/-/tree/master  书法练习轨迹
+ *
+ * @author xu
+ * @date 2021/7/8 14:32
+ */
+public class CalligraphyNicknameAnalysisUtil {
+
+    public static void main(String[] args) {
+        String text = &quot;六字：烟火尘埃落定\n&quot; +
+                &quot;五字：明明之明夜、明明之夜夜、星夜无恒恒、秋水共长天、青青子衿天、明明如夜夜\n&quot; +
+                &quot;四字：明明如夜、明如夜天、明来天明、明明夜夜、星夜无恒、如松之盛、天下有道、青青子襟、右耀去明、秋水长天、无为徐生、清风之明、昨夜星辰、东门之旭、长风雨下、清风徐来、原味吐司、星星水源、和山以水\n&quot; +
+                &quot;三字：徐先生、明来其、名字清、一世界、雨中曲、天行健、明明了、明明夜、西之白、东门之、东有雨、徐庶一、飞一飞、斜风细、明之夜\n&quot; +
+                &quot;二字：博尔、古林、明天、深岸、甲方、龙光、知一、五湖、星名、源线、小明、长天、风云、老徐、迈克、改之、择之、星夜、一柏、小徐、风格、明业、明飞、问橐、明夜、明一、米明、明云、明也、玄明、斗米、明达、徐生、四海、广毅、麦克、和时、尚書、张及、李星、赵星、张三、李四、王五、赵六、测试、木叶\n&quot; +
+                &quot;一字：徐、吾、风、明\n&quot; +
+                &quot;字母：xyqmmry、txyda、scott、scott180、xyqin、xy180、xu180、xuyq123、sc1、jack、Jack2Java、wuhu、longguang123、scott123、yxm、txyd、mmry、xyq、xu、gaizhi180、xy18484、test、xu123&quot;;
+        System.out.println(statisticsNum(text));
+    }
+   /*
+   笔名总数：115个。其中：六字1个,五字6个,四字19个,三字15个,二字47个,一字4个,字母23个。二字47个最多,六字1个最少。汉字‘明’出现次数最多，频率最高，共34次。
+
+   汉字频率：{&quot;明&quot;:34,&quot;夜&quot;:16,&quot;之&quot;:10,&quot;星&quot;:9,&quot;天&quot;:9,&quot;徐&quot;:8,&quot;风&quot;:7,&quot;一&quot;:6,&quot;水&quot;:4,&quot;青&quot;:4,&quot;长&quot;:4,&quot;如&quot;:4,&quot;清&quot;:3,&quot;东&quot;:3,&quot;生&quot;:3,&quot;恒&quot;:3,&quot;来&quot;:3,&quot;飞&quot;:3,&quot;无&quot;:3,&quot;雨&quot;:3,&quot;有&quot;:2,&quot;下&quot;:2,&quot;名&quot;:2,&quot;小&quot;:2,&quot;张&quot;:2,&quot;克&quot;:2,&quot;李&quot;:2,&quot;子&quot;:2,&quot;米&quot;:2,&quot;赵&quot;:2,&quot;和&quot;:2,&quot;源&quot;:2,&quot;云&quot;:2,&quot;五&quot;:2,&quot;秋&quot;:2,&quot;四&quot;:2,&quot;门&quot;:2,&quot;耀&quot;:1,&quot;老&quot;:1,&quot;三&quot;:1,&quot;吐&quot;:1,&quot;尔&quot;:1,&quot;世&quot;:1,&quot;尘&quot;:1,&quot;业&quot;:1,&quot;尚&quot;:1,&quot;昨&quot;:1,&quot;木&quot;:1,&quot;中&quot;:1,&quot;甲&quot;:1,&quot;改&quot;:1,&quot;为&quot;:1,&quot;格&quot;:1,&quot;落&quot;:1,&quot;吾&quot;:1,&quot;先&quot;:1,&quot;光&quot;:1,&quot;测&quot;:1,&quot;界&quot;:1,&quot;行&quot;:1,&quot;橐&quot;:1,&quot;道&quot;:1,&quot;湖&quot;:1,&quot;字&quot;:1,&quot;博&quot;:1,&quot;襟&quot;:1,&quot;也&quot;:1,&quot;健&quot;:1,&quot;火&quot;:1,&quot;六&quot;:1,&quot;共&quot;:1,&quot;山&quot;:1,&quot;味&quot;:1,&quot;其&quot;:1,&quot;海&quot;:1,&quot;白&quot;:1,&quot;松&quot;:1,&quot;衿&quot;:1,&quot;西&quot;:1,&quot;广&quot;:1,&quot;玄&quot;:1,&quot;了&quot;:1,&quot;王&quot;:1,&quot;林&quot;:1,&quot;斗&quot;:1,&quot;龙&quot;:1,&quot;定&quot;:1,&quot;斜&quot;:1,&quot;原&quot;:1,&quot;麦&quot;:1,&quot;辰&quot;:1,&quot;庶&quot;:1,&quot;岸&quot;:1,&quot;方&quot;:1,&quot;去&quot;:1,&quot;达&quot;:1,&quot;线&quot;:1,&quot;埃&quot;:1,&quot;毅&quot;:1,&quot;细&quot;:1,&quot;迈&quot;:1,&quot;及&quot;:1,&quot;柏&quot;:1,&quot;试&quot;:1,&quot;盛&quot;:1,&quot;烟&quot;:1,&quot;古&quot;:1,&quot;以&quot;:1,&quot;知&quot;:1,&quot;择&quot;:1,&quot;旭&quot;:1,&quot;问&quot;:1,&quot;深&quot;:1,&quot;曲&quot;:1,&quot;右&quot;:1,&quot;时&quot;:1,&quot;叶&quot;:1,&quot;司&quot;:1,&quot;書&quot;:1}
+   */
+
+    /**
+     * 数量统计
+     *
+     * @param text
+     * @return
+     */
+    private static String statisticsNum(String text) {
+        String[] lineArr = text.split(&quot;\n&quot;);
+        StringBuffer buffer = new StringBuffer();
+        buffer.append(&quot;笔名总数：x个。其中：&quot;);
+        StringBuffer nicknameText = new StringBuffer();
+        Integer sum = 0;
+        Integer max = 0;
+        Integer min = 100;
+        String maxText = &quot;&quot;;
+        String minText = &quot;&quot;;
+        Map&lt;String, Integer&gt; nicknameMap = new LinkedHashMap&lt;&gt;();
+        for (String val : lineArr) {
+            String[] nicknameArr = val.split(&quot;：&quot;);
+            String[] nicknameArray = nicknameArr[1].split(&quot;、&quot;);
+            int length = nicknameArray.length;
+            sum += length;
+            String num = nicknameArr[0] + length + &quot;个&quot;;
+            buffer.append(num).append(&quot;,&quot;);
+
+            if (length &gt; max) {
+                maxText = num + &quot;最多&quot;;
+                max = length;
+            }
+
+            if (length &lt; min) {
+                minText = num + &quot;最少&quot;;
+                min = length;
+            }
+
+            if (!&quot;字母&quot;.equals(nicknameArr[0])) {
+                nicknameText.append(nicknameArr[1]).append(&quot;、&quot;);
+            }
+
+            for (String nickname : nicknameArray) {
+                nicknameMap.put(nickname, nicknameMap.get(nickname) == null ? 1 : nicknameMap.get(nickname) + 1);
+            }
+        }
+
+        // 笔名分析
+        buffer.deleteCharAt(buffer.length() - 1).append(&quot;。&quot;).append(maxText).append(&quot;,&quot;).append(minText).append(&quot;。&quot;);
+        String statisticsNum = buffer.toString().replace(&quot;x&quot;, String.valueOf(sum));
+
+        // 单字频率
+        Map&lt;String, Integer&gt; statisticsFrequencyMap = statisticsFrequency(nicknameText.toString());
+        StringBuffer mostChineseChar = new StringBuffer();
+        String maxNumChar = statisticsFrequencyMap.keySet().stream().findFirst().get();
+        mostChineseChar.append(&quot;汉字‘&quot;).append(maxNumChar).append(&quot;’出现次数最多，频率最高，共&quot;).append(statisticsFrequencyMap.get(maxNumChar)).append(&quot;次。&quot;);
+
+        // 笔名是否重复
+        if (nicknameMap.size() != sum) {
+            System.out.print(&quot;提示：笔名有重复，&quot;);
+            nicknameMap.entrySet().stream().filter(nick -&gt; nick.getValue() &gt; 1).forEach(nick -&gt; System.out.print(nick.getKey() + &quot; &quot;));
+            System.out.println();
+            System.out.println(nicknameText);
+            System.out.println(JSON.toJSONString(nicknameMap));
+            System.out.println();
+        }
+        return statisticsNum + mostChineseChar.toString() + &quot;\n\n汉字频率：&quot; + JSON.toJSONString(statisticsFrequencyMap);
+    }
+
+    /**
+     * 单字频率统计
+     *
+     * @param text
+     * @return
+     */
+    private static Map&lt;String, Integer&gt; statisticsFrequency(String text) {
+        Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+
+        for (int i = 0; i &lt; text.length(); i++) {
+            String val = text.substring(i, i + 1);
+            if (&quot;、&quot;.equals(val) || &quot;\n&quot;.equals(val)) {
+                continue;
+            }
+            map.put(val, map.get(val) == null ? 1 : map.get(val) + 1);
+        }
+        return sortMap(map);
+    }
+
+    /**
+     * 按次数倒序
+     *
+     * @param map
+     * @return
+     */
+    public static Map&lt;String, Integer&gt; sortMap(Map&lt;String, Integer&gt; map) {
+        //利用Map的entrySet方法，转化为list进行排序
+        List&lt;Map.Entry&lt;String, Integer&gt;&gt; entryList = new ArrayList&lt;&gt;(map.entrySet());
+        //利用Collections的sort方法对list排序
+        Collections.sort(entryList, new Comparator&lt;Map.Entry&lt;String, Integer&gt;&gt;() {
+            @Override
+            public int compare(Map.Entry&lt;String, Integer&gt; o1, Map.Entry&lt;String, Integer&gt; o2) {
+                //正序排列，倒序反过来
+                return o2.getValue() - o1.getValue();
+            }
+        });
+        //遍历排序好的list，一定要放进LinkedHashMap，因为只有LinkedHashMap是根据插入顺序进行存储
+        LinkedHashMap&lt;String, Integer&gt; linkedHashMap = new LinkedHashMap&lt;String, Integer&gt;();
+        for (Map.Entry&lt;String, Integer&gt; e : entryList) {
+            linkedHashMap.put(e.getKey(), e.getValue());
+        }
+        return linkedHashMap;
+    }
+}
+
+
+</code></pre>
+<hr />
+<h3 id="4">4、我的账号</h3>
+<ul>
+<li><strong>个人邮箱</strong> &ensp; 1021151991@qq.com </li>
+<li><strong>资讯账号</strong> &ensp; <a href="https://www.toutiao.com/c/user/token/MS4wLjABAAAA2_bWhiknCbcKNu4c6VTM2B7m2vr7zBrh0x6fSyOrtGU">头条</a> &ensp;  <a href="https://www.douban.com/people/80730595/photos">豆瓣</a> &ensp;  <a href="https://www.zhihu.com/people/xu-xian-sheng-72-29/posts">知乎</a> &ensp; </li>
+<li><strong>项目仓库</strong> &ensp; <a href="https://gitlab.com/xuyq123/calligraphy">gitlab</a> &ensp; <a href="https://codechina.csdn.net/xu180/calligraphy">csdn_code</a> &ensp; <a href="https://github.com/scott180/calligraphy">github</a> &ensp; <a href="https://xyqin.coding.net/public/my/calligraphy/git">coding</a> &ensp; <a href="https://gitee.com/xy180/calligraphy">gitee</a> &ensp; <a href="https://bitbucket.org/xu12345/calligraphy">bitbucket</a></li>
+</ul>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../%E5%8F%A4%E6%96%87%E8%AF%97%E8%AF%8D/" class="btn btn-neutral" title="古文诗词"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../%E5%8F%A4%E6%96%87%E8%AF%97%E8%AF%8D/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
