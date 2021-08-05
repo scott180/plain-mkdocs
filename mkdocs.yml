@@ -1,4 +1,4 @@
 site_name: calligraphy
 
 theme:
-  name: readthedocs
+  name: mkdocs
