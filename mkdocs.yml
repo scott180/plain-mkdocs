@@ -2,3 +2,9 @@ site_name: calligraphy
 
 theme:
   name: mkdocs
+  
+nav: 
+  - 书法练习轨迹ReadMe: 书法练习轨迹ReadMe.md
+  - 书法练习轨迹--明月几时有: 书法练习轨迹--明月几时有.md
+  - 笔名汉字频率分析: 笔名汉字频率分析.md
+  - 古文诗词: 古文诗词.md
