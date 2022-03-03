@@ -1,4 +1,5 @@
 site_name: calligraphy
+copyright: Copyright (c) 2021 无为徐生  书法练习轨迹
 
 theme:
   name: mkdocs
